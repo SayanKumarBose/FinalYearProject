@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg');">
+
+    <div title="What we do">
+        <div class="slds-var-m-around_medium slds-theme_shade slds-theme_alert-texture">
+            <div><b><p style="color:#666aed"><u>Our Mission :</u></p></b>
+                <div>
+                    <p style="color:white"class="mission"><i>We believe in quality products that we deliver to our customer.We are a bootstrapped start-up and we want to reach our customers across the globe to help them by enabling them to know their heart condition.</i>
+                    </p> 
+                </div>
+            </div>
+            <div class="slds-var-m-around_medium">
+                <strong><p style="color:#666aed"><u>Our Products :</u></p></strong>
+                <div>
+                    <p style="color:white" class="products"><i>We deliver health care products which are designed by  technology experts and we have a wide variety of products.</i></p>
+                </i></div>
+            </div>
+            <div class="slds-var-m-around_medium">
+                <strong><p style="color:#666aed"><u>Our Accomplishments :</u></p></strong>
+                <div>
+                    <p style="color:white"class="Accomplishment"><i>We have served over 1 lakh customers in our country and have received overwhelming response from them.</p>
+                </div>
+           </i> </div>
+    
+        </div>
+    
+</lightning-card>
+ <div class="form" >
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" style="text-align: center">
+        <h1 style="color:#0cdcf7;">Predict Heart Disease</h1>
+        <input type="text" name="age" placeholder="Age" required="required" /><br><br>
+        <input type="text" name="gender" placeholder="Gender" required="required" /><br><br>
+        <input type="text" name="blood pressure" placeholder="Blood Pressure" required="required" /><br><br>
+        <input type="text" name="Cholestoral" placeholder="Cholestoral" required="required" /><br><br>
+
+        <input type="text" name="CP" placeholder="Constrictive Pericarditis " required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+        {{ prediction_text }}
+    </form>
+
+   <br>
+   <br>
+   
+   <div>
+    <div style="font-size: 20px ; color:yellow" >We are  the  <strong style="color:Orange">Sigma Tesera</strong></div>
+    <div style="color:yellow" >Email Address is <strong style="color:Orange">SigmaTesera@healthcare.com</strong></div>
+    <div style="color:yellow">Contact us at 9107162831</div>
+    <div style="color:yellow">Or Contact Us at 033-25950973</div>
+    <div style="color:yellow">We are located at Prince anwarsha</div>
+ </div>
+
+</div>
+</body>
